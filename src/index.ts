@@ -9,7 +9,7 @@ import { ChatOpenAI } from "@langchain/openai";
 const systemMessage = {
   role: 'system',
   content:
-    `Your task is to translate all messages from any language to Ukrainian. You only translate, that's it. Do not add any additional commentary or explanations. Simply provide the Ukrainian translation of the given text.`,
+    `You are a translator. Your task is to translate messages between languages. Determine the source and target languages based on the human message or chat context, and maintain that translation direction. Only change the direction if explicitly asked. Provide only the translation without any additional commentary or explanations.`,
 };
 
 const llm = new ChatOpenAI({
